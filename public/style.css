@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background: linear-gradient(#FFF 50%, #000 50%);
+    color: #777777;
+    overflow: hidden;
+}
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: calc(3vh + 3vw);
+    text-align: center;
+    color: rgb(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+#startbutton {
+    background: linear-gradient(#000 50%, #FFF 50%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 30px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+}
+#username {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    z-index: 1;
+}
+select {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-padding-end: 20px;
+    -moz-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -moz-padding-start: 2px;
+    background-color: black; /* Fallback color if gradients are not supported */
+    border: 1px solid #AAA;
+    border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: inherit;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#pianoguest {
+    position: absolute;
+    top: 30.1vh;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.whiteguest {
+    height: 100%;
+    width: 1.8vw;
+    background: black;
+    float: left;
+    border-right: 0.2vw solid white;
+    position: relative;
+}
+.blackguest {
+    position: absolute;
+    height: 65%;
+    width: 55%;
+    z-index: 1;
+    bottom: 0;
+    background: white;
+    left: 80%;
+}
+#pianouser {
+    position: absolute;
+    top: 50.5vh;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pianouser:hover {
+    cursor: pointer;
+}
+.whiteuser {
+    height: 100%;
+    width: 1.8vw;
+    background: white;
+    float: left;
+    border-left: 0.2vw solid black;
+    position: relative;
+}
+.blackuser {
+    position: absolute;
+    height: 65%;
+    width: 55%;
+    z-index: 1;
+    background: black;
+    left: 80%;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+.modal-content {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #CCC;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-header {
+    padding: 2px 16px;
+    background-color: black;
+    color: white;
+}
+.modal-body {padding: 2px 16px;}
+.modal-footer {
+    padding: 2px 16px;
+    background-color: black;
+    color: white;
+}
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+} 
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
